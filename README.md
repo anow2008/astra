@@ -10,4 +10,5 @@ Put the file in ((astra.conf))  / etc / astra. Permissions 755
 /etc/astra/astra-sm.lua
 
 Copy the file (( sysctl.conf )) to / etc
+
 / etc /sysctl.conf
