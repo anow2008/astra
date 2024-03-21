@@ -1,4 +1,4 @@
-wget -O /etc/astra/scripts/abertis https://github.com/anow2008/astra/blob/main/scripts/abertis -P /etc/astra/ && chmod 755 /etc/astra/scripts/abertis
+ wget -O /etc/astra/scripts/abertis https://github.com/anow2008/astra/blob/main/scripts/abertis -P /etc/astra/ && chmod 755 /etc/astra/scripts/abertis
 
 
 wget https://raw.githubusercontent.com/anow2008/astra/main/astra.conf -P /etc/astra/ && chmod 755 /etc/astra/astra.conf
