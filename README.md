@@ -10,6 +10,7 @@ wget https://raw.githubusercontent.com/anow2008/astra/main/astra-sm.lua -P /etc/
 wget https://raw.githubusercontent.com/anow2008/astra/main/sysctl.conf -P /etc
 
 
+wget https://raw.githubusercontent.com/anow2008/astra/main/etc/sysctl.conf -P /etc
 
 
 
