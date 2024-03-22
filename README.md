@@ -8,9 +8,6 @@ wget https://raw.githubusercontent.com/anow2008/astra/main/astra.conf -P /etc/as
 wget https://raw.githubusercontent.com/anow2008/astra/main/astra-sm.lua -P /etc/astra/ && chmod 755 /etc/astra/astra-sm.lua
 
 
-wget https://raw.githubusercontent.com/anow2008/astra/main/sysctl.conf -P /etc
-
-
 wget https://raw.githubusercontent.com/anow2008/astra/main/etc/sysctl.conf -P /etc
 
 
