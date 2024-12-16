@@ -1,13 +1,9 @@
 -- Astra Slonik Mod
 
 -- during revival and testing
-log.set({ stdout = true, debug = true, syslog = "astra", filename = "/tmp/astrasm.log", })
+-- log.set({ stdout = true, debug = true, syslog = "astra", filename = "/tmp/astrasm.log", })
 -- after revival and testing
--- log.set({ stdout = false, debug = false, syslog = "astra", })
-
--- SES6 40.6W
-
--- CELLNEX 30W
+log.set({ stdout = false, debug = false, syslog = "astra", })
 
 make_channel({
   name = "Abertis PID 301",
@@ -318,118 +314,6 @@ make_channel({
 })
 
 make_channel({
-  name = "Abertis PID 2301",
-  input = {
-    "http://localhost:8001/1:0:1:CE5:EA77:0:CE42C53:0:0:0:",
-  },
-  transform = {{
-    format = "pipe",
-      command = "/etc/astra/scripts/abertis 2301",
-  }},
-  output = {
-    "http://0.0.0.0:9999/abertis/pid2301",
-  },
-})
-
-make_channel({
-  name = "Abertis PID 2302",
-  input = {
-    "http://localhost:8001/1:0:1:CE6:EA77:0:CE42C53:0:0:0:",
-  },
-  transform = {{
-    format = "pipe",
-      command = "/etc/astra/scripts/abertis 2302",
-  }},
-  output = {
-    "http://0.0.0.0:9999/abertis/pid2302",
-  },
-})
-
-make_channel({
-  name = "Abertis PID 2303",
-  input = {
-    "http://localhost:8001/1:0:1:CE7:EA77:0:CE42C53:0:0:0:",
-  },
-  transform = {{
-    format = "pipe",
-      command = "/etc/astra/scripts/abertis 2303",
-  }},
-  output = {
-    "http://0.0.0.0:9999/abertis/pid2303",
-  },
-})
-
-make_channel({
-  name = "Abertis PID 2304",
-  input = {
-    "http://localhost:8001/1:0:1:CE8:EA77:0:CE42C53:0:0:0:",
-  },
-  transform = {{
-    format = "pipe",
-      command = "/etc/astra/scripts/abertis 2304",
-  }},
-  output = {
-    "http://0.0.0.0:9999/abertis/pid2304",
-  },
-})
-
-make_channel({
-  name = "Abertis PID 2305",
-  input = {
-    "http://localhost:8001/1:0:1:CE9:EA77:0:CE42C53:0:0:0:",
-  },
-  transform = {{
-    format = "pipe",
-      command = "/etc/astra/scripts/abertis 2305",
-  }},
-  output = {
-    "http://0.0.0.0:9999/abertis/pid2305",
-  },
-})
-
-make_channel({
-  name = "Abertis PID 2306",
-  input = {
-    "http://localhost:8001/1:0:1:CEA:EA77:0:CE42C53:0:0:0:",
-  },
-  transform = {{
-    format = "pipe",
-      command = "/etc/astra/scripts/abertis 2306",
-  }},
-  output = {
-    "http://0.0.0.0:9999/abertis/pid2306",
-  },
-})
-
-make_channel({
-  name = "Abertis PID 2307",
-  input = {
-    "http://localhost:8001/1:0:1:CEB:EA77:0:CE42C53:0:0:0:",
-  },
-  transform = {{
-    format = "pipe",
-      command = "/etc/astra/scripts/abertis 2307",
-  }},
-  output = {
-    "http://0.0.0.0:9999/abertis/pid2307",
-  },
-})
-
-make_channel({
-  name = "Abertis PID 2308",
-  input = {
-    "http://localhost:8001/1:0:1:CEC:EA77:0:CE42C53:0:0:0:",
-  },
-  transform = {{
-    format = "pipe",
-      command = "/etc/astra/scripts/abertis 2308",
-  }},
-  output = {
-    "http://0.0.0.0:9999/abertis/pid2308",
-  },
-})
-
-make_channel({
   name = "Abertis PID 2270",
   input = {
     "http://localhost:8001/1:0:1:CC6:EA76:1:CE42C26:0:0:0:",
@@ -552,6 +436,118 @@ make_channel({
   }},
   output = {
     "http://0.0.0.0:9999/abertis/pid2284",
+  },
+})
+
+make_channel({
+  name = "Abertis PID 2301",
+  input = {
+    "http://localhost:8001/1:0:1:CE5:EA77:0:CE42C53:0:0:0:",
+  },
+  transform = {{
+    format = "pipe",
+      command = "/etc/astra/scripts/abertis 2301",
+  }},
+  output = {
+    "http://0.0.0.0:9999/abertis/pid2301",
+  },
+})
+
+make_channel({
+  name = "Abertis PID 2302",
+  input = {
+    "http://localhost:8001/1:0:1:CE6:EA77:0:CE42C53:0:0:0:",
+  },
+  transform = {{
+    format = "pipe",
+      command = "/etc/astra/scripts/abertis 2302",
+  }},
+  output = {
+    "http://0.0.0.0:9999/abertis/pid2302",
+  },
+})
+
+make_channel({
+  name = "Abertis PID 2303",
+  input = {
+    "http://localhost:8001/1:0:1:CE7:EA77:0:CE42C53:0:0:0:",
+  },
+  transform = {{
+    format = "pipe",
+      command = "/etc/astra/scripts/abertis 2303",
+  }},
+  output = {
+    "http://0.0.0.0:9999/abertis/pid2303",
+  },
+})
+
+make_channel({
+  name = "Abertis PID 2304",
+  input = {
+    "http://localhost:8001/1:0:1:CE8:EA77:0:CE42C53:0:0:0:",
+  },
+  transform = {{
+    format = "pipe",
+      command = "/etc/astra/scripts/abertis 2304",
+  }},
+  output = {
+    "http://0.0.0.0:9999/abertis/pid2304",
+  },
+})
+
+make_channel({
+  name = "Abertis PID 2305",
+  input = {
+    "http://localhost:8001/1:0:1:CE9:EA77:0:CE42C53:0:0:0:",
+  },
+  transform = {{
+    format = "pipe",
+      command = "/etc/astra/scripts/abertis 2305",
+  }},
+  output = {
+    "http://0.0.0.0:9999/abertis/pid2305",
+  },
+})
+
+make_channel({
+  name = "Abertis PID 2306",
+  input = {
+    "http://localhost:8001/1:0:1:CEA:EA77:0:CE42C53:0:0:0:",
+  },
+  transform = {{
+    format = "pipe",
+      command = "/etc/astra/scripts/abertis 2306",
+  }},
+  output = {
+    "http://0.0.0.0:9999/abertis/pid2306",
+  },
+})
+
+make_channel({
+  name = "Abertis PID 2307",
+  input = {
+    "http://localhost:8001/1:0:1:CEB:EA77:0:CE42C53:0:0:0:",
+  },
+  transform = {{
+    format = "pipe",
+      command = "/etc/astra/scripts/abertis 2307",
+  }},
+  output = {
+    "http://0.0.0.0:9999/abertis/pid2307",
+  },
+})
+
+make_channel({
+  name = "Abertis PID 2308",
+  input = {
+    "http://localhost:8001/1:0:1:CEC:EA77:0:CE42C53:0:0:0:",
+  },
+  transform = {{
+    format = "pipe",
+      command = "/etc/astra/scripts/abertis 2308",
+  }},
+  output = {
+    "http://0.0.0.0:9999/abertis/pid2308",
   },
 })
 
@@ -682,13 +678,27 @@ make_channel({
 })
 
 make_channel({
+  name = "Abertis PID 3701",
+  input = {                
+    "http://localhost:8001/1:0:1:125D:EA7B:1:CE4AF69:0:0:0:",
+  },
+  transform = {{
+    format = "pipe",
+      command = "/etc/astra/scripts/abertis 3701",
+  }},
+  output = {
+    "http://0.0.0.0:9999/abertis/pid3701",
+  },
+})
+
+make_channel({
   name = "Abertis PID 8000",
-  input = {
-    "http://localhost:8001/1:0:1:3E8:EA61:0:CE4B17F:0:0:0:",
+  input = { 
+    "http://localhost:8001/1:0:1:3E8:EA61:0:CE4B17F:0:0:0:", 
 	},
   transform = {{
     format = "pipe",
-      command = "/etc/astra/scripts/abertis 8000",
+      command = "/etc/astra/scripts/abertis 8000", 
 	  }},
   output = { "http://0.0.0.0:9999/abertis/pid8000",
   },
@@ -778,313 +788,242 @@ make_channel({
   },
 })
 
--- SES4 22.1W
+-- Astra Slonik Mod
 
--- ORTM 18.1W
+log.set({ stdout = false, debug = false, syslog = "astra", })
 
--- Mediaset  5.0W
+f3615rtrn0 = make_t2mi_decap({
+        name = "3615R MIS1",
+        input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:1918E1F:0:0:0:", -- required
+        plp = 0,
+        pnr = 0,
+        pid = 4096,
+})
 
-f12670mediaset0 = make_t2mi_decap({
-    name = "12670H T2-MI  PLP0",
-    input = "http://127.0.0.1:8001/1:0:1:1:400:0:DDE317D:0:0:0", -- required
-    plp = 0,
-    pnr = 0,
-    pid = 4646,
+f3615rtrn1 = make_t2mi_decap({
+        name = "3615R MIS1", -- required
+        input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:1918E1F:0:0:0:", -- required
+        plp = 1,
+        pnr = 0,
+        pid = 4096,
+})
+
+f3615rtrn2 = make_t2mi_decap({
+        name = "3615R MIS1", -- required
+        input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:1918E1F:0:0:0:", -- required
+        plp = 2,
+        pnr = 0,
+        pid = 4096, -- optional, force payload pid
+})
+
+f3635rtrn0 = make_t2mi_decap({
+        name = "3635R MIS1",
+        input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:1918E33:0:0:0:",
+        plp = 0,
+        pnr = 0,
+        pid = 4096,
+})
+
+f3665rtrn0 = make_t2mi_decap({
+        name = "3665L MIS1",
+        input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:1910E51:0:0:0:",
+        plp = 0,
+        pnr = 0,
+        pid = 4096,
+})
+
+f3665rtrn1 = make_t2mi_decap({
+        name = "3665L MIS1",
+        input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:1910E51:0:0:0:",
+        plp = 1,
+        pnr = 0,
+        pid = 4096,
+})
+
+f3665rtrn2 = make_t2mi_decap({
+        name = "3665L MIS1",
+        input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:1910E51:0:0:0:",
+        plp = 2,
+        pnr = 0,
+        pid = 4096,
+})
+
+
+f3685rtrn0 = make_t2mi_decap({
+        name = "3685L MIS1",
+        input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:1910E65:0:0:0:",
+        plp = 0,
+        pnr = 0,
+        pid = 4096,
+})
+
+make_channel({                                                         
+        name = "3615plp0", input = { "t2mi://f3615rtrn0", },           
+        output = { "http://0.0.0.0:9999/rtrn/3615plp0", },             
+})                                                                     
+                                                                       
+make_channel({                                                         
+        name = "3615plp1", input = { "t2mi://f3615rtrn1", },           
+        output = { "http://0.0.0.0:9999/rtrn/3615plp1", },             
+})                                                                     
+                                                                       
+make_channel({                                                         
+        name = "3615plp2", input = { "t2mi://f3615rtrn2", },           
+        output = { "http://0.0.0.0:9999/rtrn/3615plp2", },             
+})                                                                     
+                                                                       
+make_channel({                                                         
+        name = "3635plp0", input = { "t2mi://f3635rtrn0", },           
+        output = { "http://0.0.0.0:9999/rtrn/3635plp0", },             
+})                                                                     
+                                                                       
+make_channel({                                                         
+        name = "3665plp0", input = { "t2mi://f3665rtrn0", },           
+        output = { "http://0.0.0.0:9999/rtrn/3665plp0", },             
+})                                                                     
+                                                                       
+make_channel({                                                         
+        name = "3665plp1", input = { "t2mi://f3665rtrn1", },           
+        output = { "http://0.0.0.0:9999/rtrn/3665plp1", },             
+})                                                                     
+                                                                       
+make_channel({                                                         
+        name = "3665plp2", input = { "t2mi://f3665rtrn2", },           
+        output = { "http://0.0.0.0:9999/rtrn/3665plp2", },             
+})                                                                     
+                                                                       
+make_channel({                                                         
+        name = "3685plp0", input = { "t2mi://f3685rtrn0", },           
+        output = { "http://0.0.0.0:9999/rtrn/3685plp0", },             
+})  
+
+-- Zeonbud 4.8E
+
+zeonmx1 = make_t2mi_decap({
+  name = "ZEONBUD MX-800",
+  input = "http://localhost:8001/1:0:1:320:107B:55:300000:0:0:0",
+  plp = 0,
+  pnr = 0,
+  pid = 4096,
+})
+
+zeonmx2 = make_t2mi_decap({
+  name = "ZEONBUD MX-801",
+  input = "http://localhost:8001/1:0:1:321:107B:55:300000:0:0:0",
+  plp = 0,
+  pnr = 0,
+  pid = 4097,
 })
 
 make_channel({
-    name = "12670mediaset0 ", input = { "t2mi://f12670mediaset0", },
-    output = { "http://0.0.0.0:9999/mediaset0/12670plp0", },
-})
-
--- STARTIMES 3.1E
-
--- KRRT 4.8E
-
-brt800 = make_t2mi_decap({
-    name = "BRT Service 800",
-    input = "http://localhost:8001/1:0:C:320:107B:55:300000:0:0:0",
-    plp = 0,
-    pnr = 0,
-    pid = 4096,
-})
-
-brt801 = make_t2mi_decap({
-    name = "BRT Service 801",
-    input = "http://localhost:8001/1:0:C:321:107B:55:300000:0:0:0",
-    plp = 0,
-    pnr = 0,
-    pid = 4097,
+  name = "ZEONBUD MX-800",
+  input = { "t2mi://zeonmx1", },
+  output = { "http://0.0.0.0:9999/zeobud/mx1", },
 })
 
 make_channel({
-    name = "BRT Service 800",
-    input = { "t2mi://brt800", },
-    output = { "http://0.0.0.0:9999/zeobud/service800", },
+  name = "ZEONBUD MX-810",
+  input = { "t2mi://zeonmx2", },
+  output = { "http://0.0.0.0:9999/zeobud/mx2", },
+})
+
+krrtmx1 = make_t2mi_decap({
+  name = "KRRT MX-800",
+  input = "http://localhost:8001/1:0:1:320:2B:55:300000:0:0:0",
+  plp = 0,
+  pnr = 0,
+  pid = 4096,
+})
+
+krrtmx2 = make_t2mi_decap({
+  name = "KRRT MX-801",
+  input = "http://localhost:8001/1:0:1:321:2B:55:300000:0:0:0",
+  plp = 0,
+  pnr = 0,
+  pid = 4097,
 })
 
 make_channel({
-    name = "BRT Service 801",
-    input = { "t2mi://brt801", },
-    output = { "http://0.0.0.0:9999/zeobud/service801", },
-})
-
--- ZEONBUD 9E
-
-f12226zeon10 = make_t2mi_decap({ name = "12226V T2-MI MIS10 PLP0", input = "http://127.0.0.1:8001/1:0:64:6E:6E:0:5AAFC2:0:0:0", plp = 0, pnr = 0, pid = 4096, })
-make_channel({ name = "12226zeon10", input = { "t2mi://f12226zeon10", }, output = { "http://0.0.0.0:9999/zeonbud/mis109" }, })
-f12226zeon20 = make_t2mi_decap({ name = "12226V T2-MI MIS20 PLP0", input = "http://127.0.0.1:8001/1:0:64:D2:D2:0:5AAFC2:0:0:0", plp = 0, pnr = 0, pid = 4096, })
-make_channel({ name = "12226zeon20", input = { "t2mi://f12226zeon20", }, output = { "http://0.0.0.0:9999/zeonbud/mis209" }, })
-f12303zeon30 = make_t2mi_decap({ name = "12303V T2-MI MIS30 PLP0", input = "http://127.0.0.1:8001/1:0:64:136:136:0:5AB00F:0:0:0:", plp = 0, pnr = 0, pid = 4096, })
-make_channel({ name = "12303zeon30", input = { "t2mi://f12303zeon30", }, output = { "http://0.0.0.0:9999/zeonbud/mis309", }, })
-
--- OMAN 21.6E
-
--- KRRT 23.5E
-
-f12285krrt800 = make_t2mi_decap({
-    name = "Service_800 T2-MI  PLP0",
-    input = "http://127.0.0.1:8001/1:0:1:320:C9E:3:EB0000:0:0:0:", -- required
-    plp = 0,
-    pnr = 0,
-    pid = 4096,
+  name = "KRRT MX-800",
+  input = { "t2mi://krrtmx1", },
+  output = { "http://0.0.0.0:9999/krrt/mx1", },
 })
 
 make_channel({
-    name = "12285krrt800", input = { "t2mi://f12285krrt800", },
-    output = { "http://0.0.0.0:9999/krrt/12285krrt800", },
+  name = "KRRT MX-810",
+  input = { "t2mi://krrtmx2", },
+  output = { "http://0.0.0.0:9999/krrt/mx2", },
 })
-
-f12285krrt801 = make_t2mi_decap({
-    name = "Service_801 T2-MI  PLP0",
-    input = "http://127.0.0.1:8001/1:0:1:321:C9E:3:EB0000:0:0:0:", -- required
-    plp = 0,
-    pnr = 0,
-    pid = 4097,
-})
-
-make_channel({
-    name = "12285krrt801", input = { "t2mi://f12285krrt801", },
-    output = { "http://0.0.0.0:9999/krrt/12285krrt801", },
-})
-
--- GOG 28.1E AFRICA
 
 -- Dasto Semtel 33.0E
 
 f11442dasto0 = make_t2mi_decap({
-    name = "11442H T2-MI  PLP0",
-    input = "http://127.0.0.1:8001/1:0:1:FA1:190:0:14A2CB2:0:0:0", -- required
-    plp = 0,
-    pnr = 0,
-    pid = 4095,
+        name = "11442H T2-MI  PLP0",
+        input = "http://127.0.0.1:8001/1:0:1:FA1:190:0:14A2CB2:0:0:0:", -- required
+        plp = 0,
+        pnr = 0,
+        pid = 4095,
 })
 
 make_channel({
-    name = "11442dasto0 ", input = { "t2mi://f11442dasto0", },
-    output = { "http://0.0.0.0:9999/dasto0/11442plp0", },
+        name = "11442dasto0", input = { "t2mi://f11442dasto0", },
+        output = { "http://0.0.0.0:9999/dasto0/11442plp0", },
 })
 
--- MCA 36E
+-- Dasto Semtel 16.0E
 
--- RTRS 40.1E
-
--- RTRS 49E
-
--- RTRS 53E
-
--- RTRS 54.9E
-
-f12602rtrs1 = make_t2mi_decap({
-    name = "12602V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:1:1:225B13A:0:0:0", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12609rtrs1 = make_t2mi_decap({
-    name = "12609V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:225B141:0:0:0", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12615rtrs1 = make_t2mi_decap({
-    name = "12615V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:1:1:225B147:0:0:0", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12622rtrs1 = make_t2mi_decap({
-    name = "12622V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:1:1:225B14E:0:0:0", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12628rtrs1 = make_t2mi_decap({
-    name = "12628V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:225B154:0:0:0", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12635rtrs1 = make_t2mi_decap({
-    name = "12635V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:225B15B:0:0:0", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12635rtrs0 = make_t2mi_decap({
-    name = "12635V T2-MI  PLP0",
-    input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:225B15B:0:0:0", -- required
-    plp = 0,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12648rtrs1 = make_t2mi_decap({
-    name = "12648V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:225B168:0:0:0:", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12674rtrs0 = make_t2mi_decap({
-    name = "12674V T2-MI  PLP0",
-    input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:225B182:0:0:0:", -- required
-    plp = 0,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12674rtrs1 = make_t2mi_decap({
-    name = "12674V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:225B182:0:0:0:", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12694rtrs0 = make_t2mi_decap({
-    name = "12694V T2-MI  PLP0",
-    input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:225B196:0:0:0:", -- required
-    plp = 0,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12694rtrs1 = make_t2mi_decap({
-    name = "12694V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:3A2:0:225B196:0:0:0:", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12714rtrs1 = make_t2mi_decap({
-    name = "12714V T2-MI  PLP1",
-    input = "http://127.0.0.1:8001/1:0:1:320:1:1:225B1AA:0:0:0:", -- required
-    plp = 1,
-    pnr = 0,
-    pid = 4096,
-})
-
-f12714rtrs2 = make_t2mi_decap({
-    name = "12714V T2-MI  PLP2",
-    input = "http://127.0.0.1:8001/1:0:1:320:1:1:225B1AA:0:0:0:", -- required
-    plp = 2,
-    pnr = 0,
-    pid = 4096,
+f11401dasto0 = make_t2mi_decap({
+        name = "11401V T2-MI  PLP0",
+        input = "http://127.0.0.1:8001/1:0:1:FA1:190:0:A0AC89:0:0:0:", -- required
+        plp = 0,
+        pnr = 0,
+        pid = 4095,
 })
 
 make_channel({
-    name = "12602rtrs1 ", input = { "t2mi://f12602rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12602plp1", },
+        name = "11401dasto0", input = { "t2mi://f11401dasto0", },
+        output = { "http://0.0.0.0:9999/dasto0/11401plp0", },
+})
+
+-- KRRT 23.5E
+
+f12285krrt800 = make_t2mi_decap({
+        name = "Service_800 T2-MI  PLP0",
+        input = "http://127.0.0.1:8001/1:0:1:320:C9E:3:EB0000:0:0:0:", -- required
+        plp = 0,
+        pnr = 0,
+        pid = 4096,
 })
 
 make_channel({
-    name = "12609rtrs1 ", input = { "t2mi://f12609rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12609plp1", },
+        name = "12285krrt800", input = { "t2mi://f12285krrt800", },
+        output = { "http://0.0.0.0:9999/krrt/12285krrt800", },
+})
+
+f12285krrt801 = make_t2mi_decap({
+        name = "Service_801 T2-MI  PLP0",
+        input = "http://127.0.0.1:8001/1:0:1:321:C9E:3:EB0000:0:0:0:", -- required
+        plp = 0,
+        pnr = 0,
+        pid = 4097,
 })
 
 make_channel({
-    name = "12615rtrs1 ", input = { "t2mi://f12615rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12615plp1", },
+        name = "12285krrt801", input = { "t2mi://f12285krrt801", },
+        output = { "http://0.0.0.0:9999/krrt/12285krrt801", },
+})
+
+-- RAI MuxB 5.0W
+
+f12606raimuxb = make_t2mi_decap({
+        name = "12606V SID 0x320 T2-MI  PLP0",
+        input = "http://127.0.0.1:8001/1:0:1:320:2:0:DDEB13E:0:0:0:", -- required
+        plp = 0,
+        pnr = 0,
+        pid = 4096,
 })
 
 make_channel({
-    name = "12622rtrs1 ", input = { "t2mi://f12622rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12622plp1", },
+        name = "f12606raimuxb", input = { "t2mi://f12606raimuxb", },
+        output = { "http://0.0.0.0:9999/raimuxb/f12606raimuxb", },
 })
-
-make_channel({
-    name = "12628rtrs1 ", input = { "t2mi://f12628rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12628plp1", },
-})
-
-make_channel({
-    name = "12635rtrs1 ", input = { "t2mi://f12635rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12635plp1", },
-})
-
-make_channel({
-    name = "12635rtrs0 ", input = { "t2mi://f12635rtrs0", },
-    output = { "http://0.0.0.0:9999/rtrs/12635plp0", },
-})
-
-make_channel({
-    name = "12648rtrs1 ", input = { "t2mi://f12648rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12648plp1", },
-})
-
-make_channel({
-    name = "12674rtrs0 ", input = { "t2mi://f12674rtrs0", },
-    output = { "http://0.0.0.0:9999/rtrs/12674plp0", },
-})
-
-make_channel({
-    name = "12674rtrs1 ", input = { "t2mi://f12674rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12674plp1", },
-})
-
-make_channel({
-    name = "12694rtrs0 ", input = { "t2mi://f12694rtrs0", },
-    output = { "http://0.0.0.0:9999/rtrs/12694plp0", },
-})
-
-make_channel({
-    name = "12694rtrs1 ", input = { "t2mi://f12694rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12694plp1", },
-})
-
-make_channel({
-    name = "12714rtrs1 ", input = { "t2mi://f12714rtrs1", },
-    output = { "http://0.0.0.0:9999/rtrs/12714plp1", },
-})
-
-make_channel({
-    name = "12714rtrs2 ", input = { "t2mi://f12714rtrs2", },
-    output = { "http://0.0.0.0:9999/rtrs/12714plp2", },
-})
-
--- RTRS 55E
-
--- KENYA 62.1E
-
--- MYTV 75.1E
-
--- THAI 78.6E
-
--- RTRS 90.1E
-
--- RTRS 96.6E
