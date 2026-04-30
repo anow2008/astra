@@ -5,21 +5,6 @@
 -- after revival and testing
 log.set({ stdout = false, debug = false, syslog = "astra", })
 
--- New Added Channel (Abertis PID 8008)
-make_channel({
-  name = "Abertis PID 8008",
-  input = {
-    "http://localhost:8001/1:0:1:3F0:EA68:0:CE43127:0:0:0:",
-  },
-  transform = {{
-    format = "pipe",
-    command = "/etc/astra/scripts/abertis 8008",
-  }},
-  output = {
-    "http://0.0.0.0:9999/abertis/pid8008",
-  },
-})
-
 make_channel({
   name = "Abertis PID 301",
   input = {
@@ -806,7 +791,7 @@ make_channel({
 make_channel({
   name = "Abertis PID 8008",
   input = {
-    "http://127.0.0.1:8001/1:0:1:3F0:EA68:0:CE4AF34:0:0:0:",
+    "http://127.0.0.1:8001/1:0:1:3F0:EA68:0:CE4B128:0:0:0:",
   },
   transform = {{
     format = "pipe",
@@ -820,7 +805,7 @@ make_channel({
 make_channel({
   name = "Abertis PID 8009",
   input = {
-    "http://localhost:8001/1:0:1:3F1:EA69:0:CE4AF34:0:0:0:",
+    "http://127.0.0.1:8001/1:0:1:3F1:EA69:0:CE4B138:0:0:0:",
   },
   transform = {{
     format = "pipe",
